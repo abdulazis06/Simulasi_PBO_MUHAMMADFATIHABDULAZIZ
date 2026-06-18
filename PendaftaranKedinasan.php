@@ -2,7 +2,6 @@
 require_once 'Pendaftaran.php';
 
 class PendaftaranKedinasan extends Pendaftaran {
-    // Properti tambahan [cite: 60]
     private $skIkatanDinas;
     private $instansiSponsor;
 
@@ -12,14 +11,12 @@ class PendaftaranKedinasan extends Pendaftaran {
         $this->instansiSponsor = $instansiSponsor;
     }
 
-    // Metode Query Spesifik Tahap 4 [cite: 61]
     public static function getDaftarKedinasan($db) {
         $sql = "SELECT * FROM tabel_pendaftaran WHERE jalur_pendaftaran = 'Kedinasan'";
         return $db->query($sql);
     }
 
     public function hitungTotalBiaya() {
-        // Dikenakan surcharge administrasi khusus sebesar 25% (dikali 1.25) [cite: 66]
         return $this->biaya_pendaftaran_dasar * 1.25; 
     }
 

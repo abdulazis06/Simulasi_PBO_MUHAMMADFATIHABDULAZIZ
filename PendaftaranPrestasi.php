@@ -2,7 +2,6 @@
 require_once 'Pendaftaran.php';
 
 class PendaftaranPrestasi extends Pendaftaran {
-    // Properti tambahan [cite: 56]
     private $jenisPrestasi;
     private $tingkatPrestasi;
 
@@ -12,14 +11,12 @@ class PendaftaranPrestasi extends Pendaftaran {
         $this->tingkatPrestasi = $tingkatPrestasi;
     }
 
-    // Metode Query Spesifik Tahap 4 [cite: 58]
     public static function getDaftarPrestasi($db) {
         $sql = "SELECT * FROM tabel_pendaftaran WHERE jalur_pendaftaran = 'Prestasi'";
         return $db->query($sql);
     }
 
     public function hitungTotalBiaya() {
-        // Mendapatkan potongan apresiasi sebesar Rp50.000 [cite: 65]
         return $this->biaya_pendaftaran_dasar - 50000; 
     }
 

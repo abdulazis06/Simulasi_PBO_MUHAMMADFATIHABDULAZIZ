@@ -2,7 +2,6 @@
 require_once 'Pendaftaran.php';
 
 class PendaftaranReguler extends Pendaftaran {
-    // Properti tambahan [cite: 53]
     private $pilihanProdi;
     private $lokasiKampus;
 
@@ -12,7 +11,6 @@ class PendaftaranReguler extends Pendaftaran {
         $this->lokasiKampus = $lokasiKampus;
     }
 
-    // Metode Query Spesifik Tahap 4 [cite: 54]
     // Dibuat 'static' agar bisa dipanggil langsung tanpa membuat objek kosong terlebih dahulu
     public static function getDaftarReguler($db) {
         $sql = "SELECT * FROM tabel_pendaftaran WHERE jalur_pendaftaran = 'Reguler'";
@@ -20,7 +18,6 @@ class PendaftaranReguler extends Pendaftaran {
     }
 
     public function hitungTotalBiaya() {
-        // Tarif standar murni [cite: 64]
         return $this->biaya_pendaftaran_dasar; 
     }
 
