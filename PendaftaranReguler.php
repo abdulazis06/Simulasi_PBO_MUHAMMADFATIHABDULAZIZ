@@ -20,6 +20,7 @@ class PendaftaranReguler extends Pendaftaran {
     }
 
     public function hitungTotalBiaya() {
+        // Tarif standar murni [cite: 64]
         return $this->biaya_pendaftaran_dasar; 
     }
 

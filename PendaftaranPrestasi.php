@@ -19,7 +19,8 @@ class PendaftaranPrestasi extends Pendaftaran {
     }
 
     public function hitungTotalBiaya() {
-        return $this->biaya_pendaftaran_dasar; 
+        // Mendapatkan potongan apresiasi sebesar Rp50.000 [cite: 65]
+        return $this->biaya_pendaftaran_dasar - 50000; 
     }
 
     public function tampilkanInfoJalur() {

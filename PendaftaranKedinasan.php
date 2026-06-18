@@ -19,7 +19,8 @@ class PendaftaranKedinasan extends Pendaftaran {
     }
 
     public function hitungTotalBiaya() {
-        return $this->biaya_pendaftaran_dasar; 
+        // Dikenakan surcharge administrasi khusus sebesar 25% (dikali 1.25) [cite: 66]
+        return $this->biaya_pendaftaran_dasar * 1.25; 
     }
 
     public function tampilkanInfoJalur() {
